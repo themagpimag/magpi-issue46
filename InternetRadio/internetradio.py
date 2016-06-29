@@ -12,10 +12,10 @@ def change_station(station):
     os.system("mplayer -playlist " + station + " &")
 
 while True:
-    if station_dial.value >= 0.5:
+    if station_dial.value >= 0.5 and station != Magic:
         station = Magic
         change_station(station)
-    elif station_dial.value < 0.5:
+    elif station_dial.value < 0.5 and station != Radio1:
         station = Radio1
         change_station(station)
     time.sleep(0.1)
